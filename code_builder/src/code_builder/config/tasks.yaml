@@ -1,0 +1,34 @@
+collect_requirements:
+  description: >
+    Collect the type of project, language, and preferences from the user input.
+  expected_output: >
+    A detailed summary of the project requirements.
+  agent: requirement_collector
+
+generate_code:
+  description: >
+    Generate working code using the collected requirements.
+  expected_output: >
+    Complete code in the selected language.
+  agent: developer
+
+test_code:
+  description: >
+    Test the generated code for syntax errors or runtime issues.
+  expected_output: >
+    A success message or a detailed error report.
+  agent: tester
+
+save_code:
+  description: >
+    Save the generated code to a file at the user-defined path.
+  expected_output: >
+    Confirmation message with the file path.
+  agent: file_manager
+
+run_code:
+  description: >
+    Execute the saved code file and return its output.
+  expected_output: >
+    The runtime output of the program.
+  agent: runner
